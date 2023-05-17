@@ -6,28 +6,28 @@
       xmlns:local="clr-namespace:kursach"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="reg">
+      Title="Регистрация" FontFamily="Comic Sans MS">
 
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10,10,-10,-10">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-                <Label>Введите Имя:</Label>
+                <Label FontFamily="Comic Sans MS">Введите Имя:</Label>
                 <TextBox Width="170" Margin="42 0 0 0" Name="Name"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-                <Label>Введите Логин:</Label>
+                <Label FontFamily="Comic Sans MS">Введите Логин:</Label>
                 <TextBox Width="170" Margin="32 0 0 0" Name="Login"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-                <Label>Введите Пароль:</Label>
+                <Label FontFamily="Comic Sans MS">Введите Пароль:</Label>
                 <TextBox Width="170" Margin="25 0 0 0" Name="Password"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-                <Label>Повтор пароля</Label>
+                <Label FontFamily="Comic Sans MS">Повтор пароля</Label>
                 <PasswordBox Width="170" Margin="34 0 0 0" PasswordChanged="PasswordBox_PasswordChanged" Name="psbPass"></PasswordBox>
             </StackPanel>
-            <Button Content="Создать" Width="100" Background="DeepSkyBlue" x:Name="btnRegIn" Click="BtnRegIn_Click" IsEnabled="False"/>
-            <Button Content="Назад" Width="100" Name="btnBack" Click="BtnBack_Click"></Button>
+            <Button Content="Создать" FontFamily="Comic Sans MS" Width="150" Background="DeepSkyBlue" x:Name="btnRegIn" Click="BtnRegIn_Click" IsEnabled="False"/>
+            <Button Content="Назад" FontFamily="Comic Sans MS" Width="100" x:Name="btnBack" Click="BtnBack_Click"/>
         </StackPanel>
     </Grid>
 </Page>
