@@ -11,23 +11,23 @@
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10,10,-10,-10">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-                <Label FontFamily="Comic Sans MS">Введите Имя:</Label>
-                <TextBox Width="170" Margin="42 0 0 0" Name="Name"></TextBox>
+                <Label FontSize="23" FontFamily="Comic Sans MS">Введите Имя:</Label>
+                <TextBox FontSize="25" Width="250" Height="40" Margin="42 0 0 0" Name="Name"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-                <Label FontFamily="Comic Sans MS">Введите Логин:</Label>
-                <TextBox Width="170" Margin="32 0 0 0" Name="Login"></TextBox>
+                <Label FontSize="23" FontFamily="Comic Sans MS">Введите Логин:</Label>
+                <TextBox FontSize="25" Width="250" Height="40" Margin="18 0 0 0" Name="Login"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-                <Label FontFamily="Comic Sans MS">Введите Пароль:</Label>
-                <TextBox Width="170" Margin="25 0 0 0" Name="Password"></TextBox>
+                <Label FontSize="23" FontFamily="Comic Sans MS">Введите Пароль:</Label>
+                <TextBox FontSize="25" Width="250" Height="40" Margin="0 0 0 0" Name="Password"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-                <Label FontFamily="Comic Sans MS">Повтор пароля</Label>
-                <PasswordBox Width="170" Margin="34 0 0 0" PasswordChanged="PasswordBox_PasswordChanged" Name="psbPass"></PasswordBox>
+                <Label FontSize="23" FontFamily="Comic Sans MS">Повтор пароля:</Label>
+                <PasswordBox FontSize="25" Width="250" Height="40" Margin="12 0 0 0" PasswordChanged="PasswordBox_PasswordChanged" Name="psbPass"></PasswordBox>
             </StackPanel>
-            <Button Content="Создать" FontFamily="Comic Sans MS" Width="150" Background="DeepSkyBlue" x:Name="btnRegIn" Click="BtnRegIn_Click" IsEnabled="False"/>
-            <Button Content="Назад" FontFamily="Comic Sans MS" Width="100" x:Name="btnBack" Click="BtnBack_Click"/>
+            <Button Content="Создать" FontFamily="Comic Sans MS" FontSize="18" Width="200" Height="40" Background="GhostWhite" x:Name="btnRegIn" Click="BtnRegIn_Click" IsEnabled="False"/>
+            <Button Content="Назад" FontFamily="Comic Sans MS" Margin="0,15,0,0" FontSize="18" Width="150" Height="30" Background="WhiteSmoke" x:Name="btnBack" Click="BtnBack_Click"/>
         </StackPanel>
     </Grid>
 </Page>
