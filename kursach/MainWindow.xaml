@@ -10,5 +10,15 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Resources/mainbackground.jpg" />
 </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Comic Sans MS"><Run Language="ru-ru" Text="Резервация"/></TextBlock>
+        <Grid  Panel.ZIndex="-2"></Grid>
+        <Grid Grid.Row="2"></Grid>
+        <Frame NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Grid.Row="1" x:Name="MainFrame"></Frame>
+        <Button Content="Назад" Height="50" Width="100" Name="BtnBack" HorizontalAlignment="Right" Click="BtnBack_Click"></Button>
     </Grid>
 </Window>
