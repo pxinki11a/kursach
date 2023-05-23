@@ -66,6 +66,9 @@
     </ApplicationDefinition>
     <Compile Include="AppConnect.cs" />
     <Compile Include="AppFrame.cs" />
+    <Compile Include="EditPage.xaml.cs">
+      <DependentUpon>EditPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="log.xaml.cs">
       <DependentUpon>log.xaml</DependentUpon>
     </Compile>
@@ -103,6 +106,10 @@
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
+    <Page Include="EditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="log.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
