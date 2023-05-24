@@ -20,9 +20,49 @@ namespace kursach
     /// </summary>
     public partial class EditPage : Page
     {
+        private rezerv _currentrezerv = new rezerv();
         public EditPage()
         {
             InitializeComponent();
+
+
+            if (selectedrezerv != null)
+                _currentrezerv = selectedrezerv;
+
+            DataContext = _currentrezerv;
         }
-    }
+
+        private void BtnSave_Click(object sender, RoutedEventArgs e)
+        {
+            StringBuilder errors = new StringBuilder();
+
+            if (string.IsNullOrWhiteSpace(_currentrezerv.Cab))
+                errors.AppendLine("Укажите кабинет");
+            if (string.IsNullOrWhiteSpace(_currentrezerv.Fio))
+                errors.AppendLine("Укажите фио");
+            if (string.IsNullOrWhiteSpace(_currentrezerv.Dataofrezerv))
+                errors.AppendLine("Укажите дату");
+            if (_currentrezerv.Srok == 0)
+                errors.AppendLine("Укажите срок");
+            if (_currentrezerv.Spec == 0)
+                errors.AppendLine("Укажите специальность");
+
+            if (errors.Length > 0)
+            {
+                MessageBox.Show(errors.ToString());
+                return;
+            }
+            if (_currentrezerv.Id == 0)
+                rezervEntities.GetContext().rezerv.Add(_currentrezerv);
+
+            try
+            {
+                rezervEntities.GetContext().SaveChanges();
+                MessageBox.Show("Информация сохранена");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
 }
