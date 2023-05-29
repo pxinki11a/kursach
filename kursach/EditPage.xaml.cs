@@ -36,15 +36,15 @@ namespace kursach
         {
             StringBuilder errors = new StringBuilder();
 
-            if (string.IsNullOrWhiteSpace(_currentrezerv.Cab))
+            if (string.IsNullOrWhiteSpace(_currentrezerv.cabinet))
                 errors.AppendLine("Укажите кабинет");
-            if (string.IsNullOrWhiteSpace(_currentrezerv.Fio))
+            if (string.IsNullOrWhiteSpace(_currentrezerv.fio))
                 errors.AppendLine("Укажите фио");
-            if (string.IsNullOrWhiteSpace(_currentrezerv.Dataofrezerv))
+            if (string.IsNullOrWhiteSpace(_currentrezerv.Datarezerva))
                 errors.AppendLine("Укажите дату");
-            if (_currentrezerv.Srok == 0)
+            if (_currentrezerv.srok == 0)
                 errors.AppendLine("Укажите срок");
-            if (_currentrezerv.Spec == 0)
+            if (_currentrezerv.spec == 0)
                 errors.AppendLine("Укажите специальность");
 
             if (errors.Length > 0)
