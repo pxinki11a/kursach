@@ -24,5 +24,23 @@ namespace kursach
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MaimFrame.Navigate(new EditPage(null));
+        }
+
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MaimFrame.Navigate(new EditPage((sender as Button).DataContext as rezerv));
+        }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MaimFrame.Navigate(new EditPage(null));
+        }
+
+
+
     }
 }
