@@ -28,7 +28,7 @@
         <TextBlock Text="Введите пароль:" FontFamily="Comic Sans MS" Grid.Column="1" Grid.Row="3" FontSize="20"></TextBlock>
         <TextBox x:Name="txbLogin" Grid.Column="1" Grid.Row="2"></TextBox>
         <PasswordBox x:Name="psbPassword" Grid.Column="1" Grid.Row="4"></PasswordBox>
-        <Button Content="Войти" FontFamily="Comic Sans MS" Background="GreenYellow" Grid.Column="1" Grid.Row="5" Margin="0,10,0,10" HorizontalAlignment="Left" Width="96" Click="Button_Click"/>
-        <Button Content="Регистрация" FontFamily="Comic Sans MS" Grid.Column="1" Grid.Row="5" Margin="105,10,0,10" HorizontalAlignment="Left" Width="95" Click="Registration_Click"/>
+        <Button Content="Войти" FontSize="16" FontFamily="Comic Sans MS" Background="GreenYellow" Grid.Column="1" Grid.Row="5" Margin="0,10,0,10" HorizontalAlignment="Left" Width="96" Click="Button_Click"/>
+        <Button Content="Регистрация" FontSize="14" FontFamily="Comic Sans MS" Grid.Column="1" Grid.Row="5" Margin="105,10,0,10" HorizontalAlignment="Left" Width="95" Click="Registration_Click"/>
     </Grid>
 </Page>
