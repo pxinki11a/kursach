@@ -20,8 +20,8 @@ namespace kursach
     /// </summary>
     public partial class EditPage : Page
     {
-        private rezerv _currentrezerv = new rezerv();
-        public EditPage()
+        private cabinet _currentrezerv = new cabinet();
+        public EditPage(cabinet selectedrezerv)
         {
             InitializeComponent();
 
@@ -36,15 +36,15 @@ namespace kursach
         {
             StringBuilder errors = new StringBuilder();
 
-            if (string.IsNullOrWhiteSpace(_currentrezerv.cabinet))
+            if (_currentrezerv.id == 0)
                 errors.AppendLine("Укажите кабинет");
-            if (string.IsNullOrWhiteSpace(_currentrezerv.fio))
+            if (_currentrezerv.id_fio == 0);
                 errors.AppendLine("Укажите фио");
-            if (string.IsNullOrWhiteSpace(_currentrezerv.Datarezerva))
-                errors.AppendLine("Укажите дату");
+            if (_currentrezerv.srok == 0)
+                errors.AppendLine("Укажите статус");
             if (_currentrezerv.srok == 0)
                 errors.AppendLine("Укажите срок");
-            if (_currentrezerv.spec == 0)
+            if (_currentrezerv.id_spec == 0)
                 errors.AppendLine("Укажите специальность");
 
             if (errors.Length > 0)
@@ -52,12 +52,12 @@ namespace kursach
                 MessageBox.Show(errors.ToString());
                 return;
             }
-            if (_currentrezerv.Id == 0)
-                rezervEntities.GetContext().rezerv.Add(_currentrezerv);
+            if (_currentrezerv.id == 0)
+                rezervEntities1.GetContext().rezerv.Add(_currentrezerv);
 
             try
             {
-                rezervEntities.GetContext().SaveChanges();
+                rezervEntities1.GetContext().SaveChanges();
                 MessageBox.Show("Информация сохранена");
             }
             catch (Exception ex)
@@ -65,4 +65,5 @@ namespace kursach
                 MessageBox.Show(ex.Message.ToString());
             }
         }
+    }
 }

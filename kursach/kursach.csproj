@@ -66,8 +66,14 @@
     </ApplicationDefinition>
     <Compile Include="AppConnect.cs" />
     <Compile Include="AppFrame.cs" />
+    <Compile Include="cabinet.cs">
+      <DependentUpon>rezerv.tt</DependentUpon>
+    </Compile>
     <Compile Include="EditPage.xaml.cs">
       <DependentUpon>EditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fio.cs">
+      <DependentUpon>rezerv.tt</DependentUpon>
     </Compile>
     <Compile Include="log.xaml.cs">
       <DependentUpon>log.xaml</DependentUpon>
@@ -103,8 +109,29 @@
     <Compile Include="reg.xaml.cs">
       <DependentUpon>reg.xaml</DependentUpon>
     </Compile>
+    <Compile Include="rezerv.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rezerv.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rezerv.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rezerv.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rezerv.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rezerv.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Role.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spec.cs">
+      <DependentUpon>rezerv.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>rezerv.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -179,11 +206,28 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <EntityDeploy Include="rezerv.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>rezerv.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="rezerv.edmx.diagram">
+      <DependentUpon>rezerv.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="rezerv.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>rezerv.edmx</DependentUpon>
+      <LastGenOutput>rezerv.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="rezerv.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>rezerv.edmx</DependentUpon>
+      <LastGenOutput>rezerv.cs</LastGenOutput>
+    </Content>
     <Resource Include="Resources\mainbackground.jpg" />
     <Resource Include="Resources\background.jpg" />
     <Content Include="Model1.Context.tt">
